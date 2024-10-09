@@ -13,12 +13,12 @@ export default function AddStudent() {
             email: '',
             phone: '',
             isRegistered: false,
-            id: null
+            id: nanoid()
         }
     }
     const handleInput = (e) => {
         setStudent((preVal) => {
-            return { ...preVal, [e.target.name]: e.target.value , isRegistered: true, id: nanoid() }
+            return { ...preVal, [e.target.name]: e.target.value , isRegistered: true,}
         })
     }
     const handleSubmit = (event) => {
